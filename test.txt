@@ -1,0 +1,33 @@
+      
+        #noises = tf.random.normal([batch_size, 100])
+
+        #with tf.GradientTape() as disc_real_tape, tf.GradientTape() as disc_fake_tape, tf.GradientTape() as gen_tape:
+            ############################
+            # (1) Update D network: maximize log(D(x)) + log(1 - D(G(z)))
+            ###########################
+                    
+            # Train with real
+        #    real_output = discriminator(real_images, training=True)
+        #    loss_real = binary_cross_entropy(tf.ones_like(real_output), real_output)
+        #    gradients = disc_real_tape.gradient(loss_real, discriminator.trainable_variables)
+        #    discriminator_opti.apply_gradients(zip(gradients, discriminator.trainable_variables))
+        #    D_x = tf.reduce_mean(real_output)
+
+            # Train with fake 
+        #    fake_images  = generator_TEST(noises, training=True)
+        #    fake_output = discriminator(fake_images, training=True)
+
+        #    loss_fake = binary_cross_entropy(tf.zeros_like(fake_output), fake_output)
+        #    gradients = disc_fake_tape.gradient(loss_fake, discriminator.trainable_variables)
+        #    discriminator_opti.apply_gradients(zip(gradients, discriminator.trainable_variables))
+
+        #    loss_disc = loss_real + loss_fake
+
+            ############################
+            # (2) Update G network: maximize log(D(G(z)))
+            ###########################
+        #    loss_gen = binary_cross_entropy(tf.ones_like(fake_output), fake_output)
+        #    gradients = gen_tape.gradient(loss_gen, generator_TEST.trainable_variables)
+        #    generator_opti.apply_gradients(zip(gradients, generator_TEST.trainable_variables))
+        #    D_G_z2 = tf.reduce_mean(fake_output)
+
